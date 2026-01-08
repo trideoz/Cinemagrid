@@ -1,0 +1,5 @@
+{
+  "name": "Cinemagrid",
+  "description": "A professional cinematic storyboard prompt generator. Design 3x3 contact sheets with precise shot control or use Gemini AI to architect the scene.",
+  "requestFramePermissions": []
+}

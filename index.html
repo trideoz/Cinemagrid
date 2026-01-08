@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cinemagrid</title>
+    
+    <script>
+      // Asegurar que las rutas relativas funcionen en subcarpetas
+      if (window.location.pathname === '/cinegrid') {
+        window.location.replace(window.location.href + '/');
+      }
+    </script>
+
+    <!-- Tailwind CSS para estilos rápidos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Babel Standalone: Compila JSX/TS en el navegador -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              cinematic: {
+                950: '#050505',
+                900: '#0a0a0a',
+                800: '#121212',
+                700: '#1e1e1e',
+                600: '#2a2a2a',
+                accent: '#eab308',
+                accentHover: '#ca8a04',
+                text: '#e5e5e5',
+                muted: '#a3a3a3'
+              }
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      html, body { margin: 0; padding: 0; background-color: #0a0a0a; color: #e5e5e5; }
+      #root { min-height: 100vh; }
+      .cinegrid-scrollbar::-webkit-scrollbar { width: 6px; }
+      .cinegrid-scrollbar::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 10px; }
+      @keyframes fade-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+      .animate-fade-in { animation: fade-in 0.4s ease-out forwards; }
+    </style>
+
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://aistudiocdn.com/react@^19.2.0",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+        "react/": "https://aistudiocdn.com/react@^19.2.0/"
+      }
+    }
+    </script>
+
+    <!-- Usamos text/babel y data-type="module" para que Babel procese el archivo TSX como un módulo JS -->
+    <script type="text/babel" data-type="module" src="./index.tsx"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
