@@ -85,66 +85,62 @@ export const DEFAULT_PANELS: PanelConfig[] = Array.from({ length: 9 }, (_, i) =>
 // --- Descriptions ---
 
 export const SHOT_DESCRIPTIONS: Record<ShotType, string> = {
-  // Wide
-  ELS: 'Extreme Long Shot — Gran plano general',
-  LS: 'Long Shot — Plano general completo',
-  VLS: 'Very Long Shot — Muy amplio, sujeto pequeño',
-  WS: 'Wide Shot — Plano amplio narrativo',
-  ES: 'Establishing Shot — Plano que presenta el lugar',
-  
-  // Medium
-  MLS: 'Medium Long Shot — Plano americano / 3/4',
-  MS: 'Medium Shot — Plano medio (cintura)',
-  MCU: 'Medium Close-Up — Plano medio–corto (pecho)',
-  CU: 'Close-Up — Primer plano (rostro)',
-  TS: 'Two Shot — Dos personajes',
-  '3S': 'Three Shot — Tres personajes',
-  GS: 'Group Shot — Más de tres personajes',
-  
-  // Detail
-  BCU: 'Big Close-Up — Cara completa muy cerrada',
-  ECU: 'Extreme Close-Up — Detalle extremo',
-  INS: 'Insert Shot — Detalle narrativo',
-  MACRO: 'Macro Close-Up — Macro técnico'
+  ELS: 'Extreme Long Shot — Shows the subject very small in a vast environment.',
+  LS: 'Long Shot — Shows the full body of the subject within the environment.',
+  VLS: 'Very Long Shot — Wide framing emphasizing the surroundings.',
+  WS: 'Wide Shot — Standard wide framing for action and context.',
+  ES: 'Establishing Shot — Specifically used to set the scene or location.',
+  MLS: 'Medium Long Shot — Framing from the knees up (American Shot).',
+  MS: 'Medium Shot — Standard framing from the waist up.',
+  MCU: 'Medium Close-Up — Framing from the chest or shoulders up.',
+  CU: 'Close-Up — Focuses primarily on the face or a specific feature.',
+  TS: 'Two Shot — Frames two subjects together comfortably.',
+  '3S': 'Three Shot — Frames three subjects in a unified composition.',
+  GS: 'Group Shot — Frames a large group of people.',
+  BCU: 'Big Close-Up — Frames the entire head with little space around it.',
+  ECU: 'Extreme Close-Up — Focuses on a specific detail (e.g., eyes, lips).',
+  INS: 'Insert Shot — A close-up of a relevant object in the scene.',
+  MACRO: 'Macro Close-Up — Highly detailed close-up of very small elements.'
 };
 
 export const ANGLE_DESCRIPTIONS: Record<AngleType, string> = {
-  'High Angle': 'Cámara desde arriba, mirando hacia abajo.',
-  'Bird’s Eye View': 'Cenital total, vista completamente superior.',
-  'Low Angle': 'Cámara desde abajo, apuntando hacia arriba.',
-  'Worm’s Eye View': 'Ángulo ultra bajo, casi desde el suelo.',
-  'Dutch Tilt': 'Ángulo inclinado, sensación de tensión o dinamismo.',
-  'Front Angle': 'Vista frontal directa del sujeto.',
-  '3/4 Angle': 'Frontal ligeramente girado, el ángulo más cinematográfico.',
-  'Side Angle': 'Vista lateral exacta (perfil).',
-  'Back Angle': 'Vista desde atrás del sujeto.',
-  'Over-The-Shoulder': 'Ángulo sobre el hombro, típico de escenas narrativas.'
+  'High Angle': 'Camera looks down on the subject, making them appear smaller or vulnerable.',
+  'Bird’s Eye View': 'Direct overhead shot, looking straight down at the ground.',
+  'Low Angle': 'Camera looks up at the subject, making them appear powerful or tall.',
+  'Worm’s Eye View': 'Ultra-low angle, looking straight up from the ground level.',
+  'Dutch Tilt': 'The camera is rotated horizontally, creating a sense of unease or dynamic energy.',
+  'Front Angle': 'Direct eye-level view, straightforward and intimate.',
+  '3/4 Angle': 'The classic "three-quarter" view, adding depth and dimension to the subject.',
+  'Side Angle': 'A strict profile view of the subject.',
+  'Back Angle': 'Viewing the subject from directly behind.',
+  'Over-The-Shoulder': 'Looking past one subject’s shoulder at another, great for dialogue.'
 };
 
-export const NARRATIVE_DESCRIPTIONS: Partial<Record<NarrativeType, string>> = {
-  'Establishing': 'Presenta el entorno o contexto.',
-  'Character Intro': 'Presenta al personaje.',
-  'Key Object Intro': 'Presenta un objeto importante.',
-  'Action Beat': 'Muestra la acción principal.',
-  'Progression Shot': 'Muestra avance o desarrollo.',
-  'Confrontation': 'Enmarca tensión o conflicto.',
-  'Reaction Shot': 'Captura la respuesta emocional.',
-  'Internal Beat': 'Sugiere reflexión o duda.',
-  'Descriptive Shot': 'Destaca un detalle relevante.',
-  'Narrative Insert': 'Enfatiza un objeto dramático.',
-  'Clue Shot': 'Señala un detalle revelador.',
-  'Visual Context': 'Muestra un elemento que define al personaje.',
-  'Transition': 'Indica un cambio de lugar o tiempo.',
-  'Resolution': 'Muestra la consecuencia o cierre.',
-  'Closing Shot': 'Cierra visualmente la escena.',
-  'Wind-down': 'Reduce ritmo hacia el final.',
-  'Cliffhanger': 'Deja tensión o pregunta abierta.',
-  
-  // Legacy
-  'Context': 'Presenta el entorno o contexto.',
-  'Detail': 'Destaca un detalle relevante.',
-  'Emotion': 'Captura la respuesta emocional.',
-  'Tension': 'Enmarca tensión o conflicto.'
+export const NARRATIVE_DESCRIPTIONS: Record<NarrativeType, string> = {
+  'Establishing': 'Used to introduce the world, location, or general mood of the scene.',
+  'Character Intro': 'Focuses on revealing a character for the first time.',
+  'Key Object Intro': 'Highlights an object that will be critical to the plot later.',
+  'Action Beat': 'Captures a specific moment of physical movement or key activity.',
+  'Progression Shot': 'Shows the character moving from point A to point B or evolving.',
+  'Confrontation': 'Frames the moment of direct conflict or high tension between elements.',
+  'Reaction Shot': 'Focuses on a character responding emotionally to an event.',
+  'Internal Beat': 'Suggests the character is thinking, reflecting, or feeling internal doubt.',
+  'Descriptive Shot': 'A general shot that adds texture or detail to the storytelling.',
+  'Narrative Insert': 'A close-up "insert" that forces the viewer to notice a specific clue.',
+  'Clue Shot': 'Directly points at something hidden or essential for solving a mystery.',
+  'Visual Context': 'Shows a character’s tools or surroundings to define their personality.',
+  'Transition': 'Acts as a bridge between two scenes or time periods.',
+  'Resolution': 'Shows the outcome of an action or the closing of a dramatic beat.',
+  'Closing Shot': 'The final image of the sequence, used for finality or impact.',
+  'Wind-down': 'A slow-paced shot used to lower energy after a peak moment.',
+  'Cliffhanger': 'An image that leaves the viewer with a question or unresolved tension.',
+  'Context': 'General background or context for the scene.',
+  'Detail': 'Specific detailed look at a subject.',
+  'Emotion': 'Emotional weight or character focus.',
+  'Tension': 'Suspenseful or high-pressure framing.',
+  'Isolation': 'Subject shown alone and separated.',
+  'Power': 'Subject shown in a position of authority.',
+  'Vulnerability': 'Subject shown in a weak or exposed state.'
 };
 
 export const TOP_NARRATIVES: NarrativeType[] = [
